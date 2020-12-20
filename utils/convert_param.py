@@ -1,5 +1,8 @@
-import torch
-import paddle            
+# code for converting the pretrained weights from pytorch to paddle.
+# Remember to install torch and uncomment the following line if you need
+# to use this script.
+
+# import torch
 import paddle.fluid as fluid
 from models.erfnet_pad import ERFNet
 
@@ -12,7 +15,7 @@ if __name__ == '__main__':
         checkpoint = torch.load(weight, map_location='cpu')
         cnt = 0
         stdict = {}
-        
+
         for name, param in checkpoint['state_dict'].items():
             name = name.replace('module.', '')
             if 'running_mean' in name:
@@ -33,5 +36,5 @@ if __name__ == '__main__':
             else:
                 print(name)
         model.load_dict(stdict)
-        fluid.dygraph.save_dygraph(model.state_dict(), 'pretrained/ERFNet_pretrained2')
+        fluid.dygraph.save_dygraph(model.state_dict(), 'pretrained/ERFNet_pretrained')
         print(cnt)

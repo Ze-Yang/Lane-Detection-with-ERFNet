@@ -1,8 +1,10 @@
 # Code for 2020 China Hualu Cup Data Lake Algorithm Competition (Lane Detection Track)
 
 In this repo, we adopt [ERFNet](http://www.robesafe.uah.es/personal/eduardo.romera/pdfs/Romera17tits.pdf) as the base
-model to conduct the multi-class lane detection task. For more information about this task, we refer you to the official 
-[website](https://dev.ehualu.com/dev/home/competition/competitionDetail?competitionId=1).
+model to address the multi-class lane detection task proposed in 2020 China Hualu Cup Data Lake Algorithm Competition.
+For more information about this task, we refer you to the 
+official [website](https://dev.ehualu.com/dev/home/competition/competitionDetail?competitionId=1).
+Our method achieved the **second** runner up in this competition.
 
 ## Contents
 1. [Installation](#installation)
@@ -45,7 +47,7 @@ are conducted to obtain higher quality training samples, resulting in 15,170 tra
   wrong class label. The last image belongs to miss label case since the dashed yellow line is missed.
 2. There also exists some duplicate images with different annotation label maps. In this case, we manually select 
 the one we regard owns the best annotation map and ignore all the rest.
-3. We resize all the images to the same size of 1280*720 to reduce data reading time.
+3. We resize all the images to the same size of 1280*720 to reduce data loading time.
 
 ![wrongly annotated examples](examples/example.jpg)
 
@@ -68,6 +70,9 @@ We assumes the directory layout for the competition dataset `PreliminaryData` as
                 ├── 10014001.jpg
                 ├── ...
                 └── 10016129.jpg
+
+Note: Due to copyright issues, we do not release the dataset used for the competition, feel free to adopt our method on
+your own dataset.
 
 ## Training
 To train the model, run the following command.
