@@ -4,7 +4,8 @@ In this repo, we adopt [ERFNet](http://www.robesafe.uah.es/personal/eduardo.rome
 model to address the multi-class lane detection task proposed in 2020 China Hualu Cup Data Lake Algorithm Competition.
 For more information about this task, we refer you to the 
 official [website](https://dev.ehualu.com/dev/home/competition/competitionDetail?competitionId=1).
-Our method achieved the **second** runner up in this competition.
+Our method achieved the **second** runner up in this competition. An overview of our solution is available 
+[here](https://pan.baidu.com/s/1UbcY6fa8h44aLljK-t8HOg) (passwd: shid).
 
 ## Contents
 1. [Installation](#installation)
