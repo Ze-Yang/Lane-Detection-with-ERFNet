@@ -56,7 +56,7 @@ the one we regard owns the best annotation map and ignore all the rest.
 
 ![wrongly annotated examples](examples/example.jpg)
 
-We assumes the directory layout for the competition dataset `PreliminaryData` as below.
+We assume the directory layout for the competition dataset `PreliminaryData` as below.
 
     Project_ROOT
     └── datasets
