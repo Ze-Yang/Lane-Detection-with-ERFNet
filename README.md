@@ -1,11 +1,15 @@
 # Code for 2020 China Hualu Cup Data Lake Algorithm Competition (Lane Detection Track)
 
-In this repo, we adopt [ERFNet](http://www.robesafe.uah.es/personal/eduardo.romera/pdfs/Romera17tits.pdf) as the base
-model to address the multi-class lane detection task proposed in 2020 China Hualu Cup Data Lake Algorithm Competition.
-For more information about this task, we refer you to the 
-official [website](https://dev.ehualu.com/dev/home/competition/competitionDetail?competitionId=1).
-Our method achieved the **second** runner up in this competition. An overview of our solution is available 
-[here](https://pan.baidu.com/s/1UbcY6fa8h44aLljK-t8HOg) (passwd: shid).
+## Introduction
+This repo contains the 2nd place solution for the Lane Detection Track of the 2020 China Hualu Cup Data Lake Algorithm
+Competition. For more information about this task, we refer you to the 
+official [website](https://dev.ehualu.com/dev/home/competition/competitionDetail?competitionId=1). In this competion, 
+We adopt the [ERFNet](http://www.robesafe.uah.es/personal/eduardo.romera/pdfs/Romera17tits.pdf) as our base
+model for its lightweight and large receptive field, which are critical factors in this task. Furthermore, we perform 
+data cleaning, sky removing and weighted crossentropy loss as the main techniques along with several other tricks to 
+achieve the compelling performance (42.25 mIoU on Final testB) in a highly efficient manner. No model ensemble is used 
+in our solution. Finally, our solution achieved the **second** runner up out of 576 teams in this competition. An overview 
+of our solution is available [here](https://pan.baidu.com/s/1UbcY6fa8h44aLljK-t8HOg) (passwd: shid).
 
 ## Contents
 1. [Installation](#installation)
