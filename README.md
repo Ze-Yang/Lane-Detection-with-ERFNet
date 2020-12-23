@@ -1,14 +1,14 @@
 # Code for 2020 China Hualu Cup Data Lake Algorithm Competition (Lane Detection Track)
 
 ## Introduction
-This repo contains the 2nd place solution for the Lane Detection Track of the 2020 China Hualu Cup Data Lake Algorithm
+This repo contains the **first** place solution by the Incredible@NTU team for the Lane Detection Track of the 2020 China Hualu Cup Data Lake Algorithm
 Competition. For more information about this task, we refer you to the 
 official [website](https://dev.ehualu.com/dev/home/competition/competitionDetail?competitionId=1). In this competion, 
 We adopt the [ERFNet](http://www.robesafe.uah.es/personal/eduardo.romera/pdfs/Romera17tits.pdf) as our base
 model for its lightweight and large receptive field, which are critical factors in this task. Furthermore, we perform 
 data cleaning, sky removing and weighted crossentropy loss as the main techniques along with several other tricks to 
 achieve the compelling performance (42.25 mIoU on Final testB) in a highly efficient manner. No model ensemble is used 
-in our solution. Finally, our solution achieved the **second** runner up out of 576 teams in this competition. An overview 
+in our solution. Finally, our solution won the champion out of 576 teams in this competition. An overview 
 of our solution is available [here](https://pan.baidu.com/s/1UbcY6fa8h44aLljK-t8HOg) (passwd: shid).
 
 ## Contents
@@ -84,7 +84,7 @@ To train the model, run the following command.
 ```Shell
 python train_erfnet_paddle.py --epochs 150 -b 8 --lr 0.01
 ```
-By default, we train our model with batch size 8 for 150 epochs on 1 RTX 2080ti GPU, which takes up approximately 
+By default, we train our model with batch size 8 for 150 epochs on one RTX 2080ti GPU, which takes up approximately 
 7,000 MB GPU memory and 24hrs to finish. Our model starts with the pretrained weights
 `pretrained/ERFNet_pretrained.pdparams`, which is converted from the released torch version pretrained
 [weights](https://github.com/cardwing/Codes-for-Lane-Detection/blob/master/ERFNet-CULane-PyTorch/pretrained/ERFNet_pretrained.tar)
