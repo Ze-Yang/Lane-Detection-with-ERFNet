@@ -11,6 +11,9 @@ achieve the compelling performance (42.25 mIoU on Final testB) in a highly effic
 in our solution. Finally, our solution won the champion out of 576 teams in this competition. An overview 
 of our solution is available [here](https://pan.baidu.com/s/1UbcY6fa8h44aLljK-t8HOg) (passwd: shid).
 
+## Updates
+- Add `visualization.py` for label visualization. See [utils/README.md](utils/README.md) for details. (04/01/2021)
+
 ## Contents
 1. [Installation](#installation)
 2. [Datasets](#datasets)
@@ -24,6 +27,7 @@ of our solution is available [here](https://pan.baidu.com/s/1UbcY6fa8h44aLljK-t8
 - CUDA 10.0 or 10.1
 - cuDNN 7.6.5
 - TensorBoard (optional)
+- pycocotools (optional)
 
 Notes: 
 
@@ -32,12 +36,15 @@ Notes:
 - TensorBoard is optional, just for recording training process. If not installed, feel free to comment relevant lines
 of code.
 
+- pycocotools is only required for visualization in `utils/visualization.py`.
+
 For your convenience, we wrap up the installation process with the following commands.
 
 ```Shell
 conda create -n paddle python=3.7 -y && conda activate paddle
 pip install opencv-python==4.2.0.32
 python -m pip install paddlepaddle-gpu==1.8.5.post107 -i https://mirror.baidu.com/pypi/simple
+pip install pycocotools
 ```
 
 ## Datasets
